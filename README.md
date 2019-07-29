@@ -20,7 +20,7 @@
     ·打开终端输入：`mysql：brew install mysql `
     ·配置与初始化：`mysql_secure_installation`
     
-```
+```shell
 $ mysql_secure_installation
  
 Securing the MySQL server deployment.
@@ -90,7 +90,8 @@ All done!
   2.cd进入项目并安装 `cd code-push-server && npm install`
   3.修改配置文件 config/config.js 文件
   
-```db: {
+```js
+db: {
     username: process.env.RDS_USERNAME || "root",
     password: process.env.RDS_PASSWORD || "123456",//你的MySQL访问密码
     database: process.env.DATA_BASE || "codepush",//如果你init的时候指定了数据库名字的话，也需要改
@@ -146,7 +147,7 @@ All done!
  
  #####               有关CodePush账户相关的命令
 
-```
+``` shell
 code-push login 登陆
 code-push logout 注销
 code-push access-key ls 列出登陆的token
@@ -154,7 +155,7 @@ code-push access-key rm <accessKye> 删除某个 access-key
 ```
 * 2.创建或使用已有RN项目
 
-```* 
+```shell * 
     cd ./ 存放项目目录
     react-native init TestRNUpdateDemo
     cd ./TestRNUpdateDemo
@@ -171,9 +172,9 @@ code-push access-key rm <accessKye> 删除某个 access-key
 * 3.添加应用到CodePush
  由于CodePush的iOS与Android的双系统是分开管理热更新的，那么为了区分这两个平台的版本管理，将在应用后面板添加 <-platform>
 
-```  code-push app add 工程名-android #android版
+```shell  code-push app add 工程名-android #android版
   code-push app add 工程名-ios #ios版
-Successfully added the "HotUpdateDemo-android" app, along with the   following default deployments:
+Successfully added the "TestRNUpdateDemo" app, along with the   following default deployments:
 ┌────────────┬──────────────────────────────────  ─────┐
 │ Name       │ Deployment Key                        │
 ├────────────┼──────────────────────────────────  ─────┤
@@ -187,7 +188,7 @@ Successfully added the "HotUpdateDemo-android" app, along with the   following d
 ###常见CodePush命令
  
 
-```
+```shell
  code-push app list 可以查看创建好的APP
  code-push deployment ls  APP_NAME  -k 查看Deployment Key
  code-push app add 在账号里面添加一个新的app
@@ -206,7 +207,7 @@ code-push deployment ls APP_NAME -k
 
 * Android添加Deployment Key
 
-```
+```java
  在MainApplication.java文件中
 @Override
 protected List<ReactPackage> getPackages() {
@@ -224,7 +225,8 @@ protected List<ReactPackage> getPackages() {
 
 * iOS添加Deployment Key
 
-```在info.plist中添加key
+```XML
+在info.plist中添加key
 <key>CodePushDeploymentKey</key>
 <string>Deployment Key</string>
 <key>CodePushServerURL</key>
@@ -237,7 +239,7 @@ protected List<ReactPackage> getPackages() {
  
 *  替换index.js文件
  
-```
+```js
 
 /**
  * Sample React Native App
@@ -428,10 +430,15 @@ const styles = StyleSheet.create({
 
 
 打包bundle结束后，就可以通过CodePush发布更新了。在控制台输入
-`code-push release<应用名称> <Bundles所在目录> <对应的应用版本>
+` 
+code-push release<应用名称> <Bundles所在目录> <对应的应用版本>
 	 --deploymentName 更新环境
 	 --description 更新描述
-	 --mandatory 是否强制更新`
+	 --mandatory 是否强制更新 `
+	 
+	 
+	 
+	 
 	 #####常见其他更新命令
 	 CodePush还可以进行很多种更新控制
 ###添加一个更新log
