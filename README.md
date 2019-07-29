@@ -1,2 +1,2 @@
-# studyCodePushServer
-学习如何配置搭建CodePushServer
+# 一篇关于配置CodePushServer的博文 
+ 
