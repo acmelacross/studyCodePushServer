@@ -448,16 +448,16 @@ code-push release<应用名称> <Bundles所在目录> <对应的应用版本>
 	 
 	 #####常见其他更新命令
 	 CodePush还可以进行很多种更新控制
-###添加一个更新log
+####  添加一个更新log
 `code-push release-react MyApp-iOS ios -m --description "添加了注册功能"`
 
-### 只打包一个js文件
+####  只打包一个js文件
 `code-push release-react MyApp-iOS ios --entryFile MyApp.js --sourcemapOutput ../maps/MyApp.map`
 
-###只更新25%的用户
+####  只更新25%的用户
 `code-push release-react MyApp-Android android --rollout 25% --dev true
 `
-###只更新1.0版本的客户端
+#### 只更新1.0版本的客户端
 `code-push release-react MyApp-Android android --targetBinaryVersion "~1.0.0"`
 	 
 	 
