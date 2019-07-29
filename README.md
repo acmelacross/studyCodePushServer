@@ -136,6 +136,7 @@ All done!
   
 ### 二、安装和注册CodePushServer 账号
 * 1.下载配置codePush
+
  1️⃣code-push管理  输入命令 code-push register http://api.code-push.com #注册一个CodepushServer 账号（登陆成功后一定复制保存好弹出的Token）
 
  2️⃣本地版本管理配置 ：cd 到CodePushServer目录，执行 `./bin/www`开启本地服务
