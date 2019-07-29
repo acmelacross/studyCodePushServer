@@ -1,17 +1,17 @@
 
 [具体流程]()
 
-####Step1. 配置相关环境
+#### Step1. 配置相关环境
 
-####Step2.  注册CodePushServer 账号
+#### Step2.  注册CodePushServer 账号
 
-####Step3. 在CodePushServer 注册app
+#### Step3. 在CodePushServer 注册app
 
-####Step4. 在Xcode与AndroidStudio中修改develpment key
+#### Step4. 在Xcode与AndroidStudio中修改develpment key
 
-####Step5. 更新代码后，发布一个应用更新到服务器
+#### Step5. 更新代码后，发布一个应用更新到服务器
 
-####Step6. app收到升级推送
+#### Step6. app收到升级推送
 
 
 
