@@ -1,17 +1,17 @@
 
-[具体流程如下](#)
+[具体流程]()
 
-#### Step1. 配置相关环境
+####Step1. 配置相关环境
 
-#### Step2.  注册CodePushServer 账号
+####Step2.  注册CodePushServer 账号
 
-#### Step3. 在CodePushServer 注册app
+####Step3. 在CodePushServer 注册app
 
-#### Step4. 在Xcode与AndroidStudio中修改develpment key
+####Step4. 在Xcode与AndroidStudio中修改develpment key
 
-#### Step5. 更新代码后，发布一个应用更新到服务器
+####Step5. 发布一个应用更新到服务器
 
-#### Step6. app收到升级推送
+####Step6. app收到升级推送
 
 
 
@@ -169,7 +169,7 @@ code-push access-key rm <accessKye> 删除某个 access-key
 -------
 
 
-* 3.添加应用到CodePush
+###3.在CodePushServer 注册app
  由于CodePush的iOS与Android的双系统是分开管理热更新的，那么为了区分这两个平台的版本管理，将在应用后面板添加 <-platform>
 
 ```shell  code-push app add 工程名-android #android版
@@ -204,7 +204,7 @@ code-push deployment clear APP_NAME Staging
 //查看key
 code-push deployment ls APP_NAME -k
 ```
-
+### 4.在Xcode与AndroidStudio中修改develpment key
 * Android添加Deployment Key
 
 ```java
@@ -427,7 +427,7 @@ const styles = StyleSheet.create({
 
 ```
 
-
+###5.  发布一个应用更新到服务器
 
 打包bundle结束后，就可以通过CodePush发布更新了。在控制台输入
 ` 
