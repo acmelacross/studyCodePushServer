@@ -229,6 +229,10 @@ protected List<ReactPackage> getPackages() {
 <string>Deployment Key</string>
 <key>CodePushServerURL</key>
 <string>填入你的电脑IP:eg. http://192.168.0.7:3000</string>
+ 
+
+
+
 ```
  
 *  替换index.js文件
